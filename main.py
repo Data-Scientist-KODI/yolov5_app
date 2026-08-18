@@ -19,6 +19,10 @@ def load_model():
     else:
         raise FileNotFoundError(f"Model file '{MODEL_PATH}' not found.")
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 @app.post("/crop-best-face/")
 async def crop_best_face(file: UploadFile = File(...)):
     # Validate input file type

@@ -51,3 +51,4 @@ ultralytics-thop==2.1.6
 urllib3==2.7.0
 uvicorn==0.52.3
 pytest
+ruff

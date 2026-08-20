@@ -27,3 +27,5 @@ jobs:
         run: pytest
       - name: Run linting
         run: ruff check .
+      - name: Security audit
+        run: pip-audit

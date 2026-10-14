@@ -1,3 +1,5 @@
+# Crop processing utility
+
 # # # Single images
 
 import cv2

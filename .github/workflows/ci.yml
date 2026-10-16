@@ -31,3 +31,15 @@ jobs:
 
       - name: Run automated tests
         run: python -m pytest -v
+
+      - name: Prepare application package
+        run: |
+          mkdir -p dist
+          cp crop.py best_float16.tflite requirements.txt dist/
+
+      - name: Upload application artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: yolov5-app-package
+          path: dist/
+          retention-days: 7

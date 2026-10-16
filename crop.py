@@ -202,6 +202,7 @@
 import argparse
 import os
 
+
 def select_best_box(boxes):
     """Return the bounding box with the highest confidence."""
     best_box = None
